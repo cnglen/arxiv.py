@@ -28,7 +28,7 @@ def query(search_query="",
                           "start": start,
                           "max_results": max_results,
                           "sortBy": sort_by,
-                          "sortOrder": sort_order}, quote='+')
+                          "sortOrder": sort_order}, safe='+')
     results = feedparser.parse(root_url + 'query?' + url_args)
     if results.get('status') != 200:
         # TODO: better error reporting
